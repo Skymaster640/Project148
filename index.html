@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    </head>
+
+    <body>
+        <a-scene background = "color:#2A281E">
+            <a-assets>
+                <a-asset-item 
+                id = "lamp"
+                src = "lamp/scene.gltf">
+    
+                </a-asset-item>
+    
+                <a-asset-item
+                id = "cat"
+                src = "cat/scene.gltf">
+    
+                </a-asset-item>
+    
+                <a-asset-item
+                id = "girl"
+                src = "girl/scene.gltf">
+    
+                </a-asset-item>
+    
+                <a-asset-item
+                id = "bench"
+                src = "bench/scene.gltf">
+    
+                </a-asset-item>
+            </a-assets>
+
+            <a-box
+            position = "0 0 -5"
+                width = "10"
+                depth = "3"
+                height = "0.0000001"
+                src = "Streetroad.png"
+                shadow="receive: true"
+                
+                >
+            </a-box>
+            <a-box
+            position = "0 -0.11 -5"
+                width = "10"
+                depth = "3"
+                height = "0.2"
+                color = "black"
+                >
+            </a-box>
+
+            <a-box
+            position = "0 4 -6.5"
+                width = "10"
+                depth = "0.0000001"
+                height = "10"
+                src = "Nightbackground.png"
+                >
+            </a-box>
+
+            <a-entity>
+                <a-entity position="2 0.4 -5" rotation="0 105 0" scale="0.002 0.002 0.002" gltf-model="#cat" shadow = "cast:true;">
+                </a-entity>
+              </a-entity>
+            
+              <a-entity>
+                <a-entity position="-2 2 -6" rotation="0 105 0" scale = "2 2 2" gltf-model="#lamp" shadow = "cast:true;">
+                </a-entity>
+              </a-entity>
+
+              <a-entity>
+                <a-entity position="-0.8 0.4 -6" rotation="0 0 0" scale = "1 1 1" gltf-model="#bench" shadow = "cast:true;">
+                </a-entity>
+              </a-entity>
+
+              <a-entity>
+              <a-entity
+                    scale="0.003 0.003 0.003"
+                    rotation = "0 0 0"
+                    gltf-model="#girl"
+                    position="-2 0.4 3"
+                    shadow="cast:true;"
+            ></a-entity>
+            </a-entity>
+
+            <a-entity
+        light="type: point; castShadow: true; color: #e6ca14; intensity: 2.35"
+        position="-9.92951 5.39487 4.29438"
+      >
+      </a-entity>
+      <a-entity light="type: ambient;"> </a-entity>
+    </a-scene>
+        </a-scene>
+    </body>
+</html>
